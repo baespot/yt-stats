@@ -1,0 +1,18 @@
+{
+  "buildCommand": "vite build",
+  "outputDirectory": "dist",
+  "framework": "vite",
+  "rewrites": [
+    { "source": "/api/search", "destination": "/api/search" },
+    { "source": "/api/analyze", "destination": "/api/analyze" },
+    { "source": "/(.*)", "destination": "/index.html" }
+  ],
+  "functions": {
+    "api/search.ts": {
+      "maxDuration": 30
+    },
+    "api/analyze.ts": {
+      "maxDuration": 300
+    }
+  }
+}
